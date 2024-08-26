@@ -4,16 +4,21 @@
       <el-header class="sys-header">WebGIS一张图项目系统</el-header>
       <el-container class="app-content-pannel">
         <el-aside class="sys-menu">左侧菜单栏</el-aside>
-        <el-main>地图区域</el-main>
+        <el-main class="sys-content">
+          <MapView />
+        </el-main>
       </el-container>
     </el-container>
   </div>
 </template>
 
 <script>
+import MapView from './components/common/MapView.vue';
 export default {
   name: 'App',
-  components: {},
+  components: {
+    MapView,
+  },
 };
 </script>
 
@@ -39,6 +44,9 @@ body,
 }
 .sys-menu {
   background-color: #c0c4cc;
+}
+.sys-content {
+  padding: 5px;
 }
 </style>
 
