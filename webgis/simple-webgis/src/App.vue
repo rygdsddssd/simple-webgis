@@ -73,6 +73,7 @@ body,
 .app-out-pannel,
 .app-content-pannel {
   height: 100%;
+  position: relative;
 }
 .sys-header {
   background-color: #303133;
