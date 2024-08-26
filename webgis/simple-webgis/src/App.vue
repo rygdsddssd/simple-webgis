@@ -3,9 +3,36 @@
     <el-container class="app-out-pannel">
       <el-header class="sys-header">WebGIS一张图项目系统</el-header>
       <el-container class="app-content-pannel">
-        <el-aside class="sys-menu">左侧菜单栏</el-aside>
+        <el-aside class="sys-menu">
+          <el-menu
+            default-active="1"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+            :collapse="true"
+            background-color="#606266">
+            <el-menu-item index="1">
+              <i class="el-icon-monitor"></i>
+              <span slot="title">地图大屏</span>
+            </el-menu-item>
+            <el-menu-item index="2">
+              <i class="el-icon-picture-outline"></i>
+              <span slot="title">一张图</span>
+            </el-menu-item>
+            <el-menu-item index="3">
+              <i class="el-icon-map-location"></i>
+              <span slot="title">三维展示</span>
+            </el-menu-item>
+            <el-menu-item index="4">
+              <i class="el-icon-setting"></i>
+              <span slot="title">数据管理</span>
+            </el-menu-item>
+          </el-menu>
+        </el-aside>
+
         <el-main class="sys-content">
-          <MapView />
+          <router-view></router-view>
+          <!-- <MapView /> -->
         </el-main>
       </el-container>
     </el-container>
@@ -13,11 +40,19 @@
 </template>
 
 <script>
-import MapView from './components/common/MapView.vue';
+// import MapView from './components/common/MapView.vue';
 export default {
   name: 'App',
   components: {
-    MapView,
+    // MapView,
+  },
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
+    },
   },
 };
 </script>
@@ -43,10 +78,11 @@ body,
   font-size: 600;
 }
 .sys-menu {
-  background-color: #c0c4cc;
+  background-color: #606266;
+  width: 60px !important;
+  overflow: hidden;
 }
 .sys-content {
   padding: 5px;
 }
 </style>
-
