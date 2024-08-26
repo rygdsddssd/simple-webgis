@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import DataVisval from './../pages/DataVisual.vue';
-import OneMap from './../pages/OneMap.vue';
+import DataVisval from './../src/components/pages/DataVisual.vue';
+import OneMap from './../src/components/pages/OneMap.vue';
 Vue.use(VueRouter);
 const originalPush = VueRouter.prototype.push
 // 修改 原型对象中的push方法

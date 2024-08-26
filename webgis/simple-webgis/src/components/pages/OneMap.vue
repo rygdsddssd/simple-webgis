@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MapView from './../src/components/common/MapView.vue';
+import MapView from './../common/MapView.vue';
 export default {
   name: 'OneMap',
   components: {
