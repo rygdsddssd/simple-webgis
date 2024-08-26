@@ -7,8 +7,7 @@
           <el-menu
             default-active="1"
             class="el-menu-vertical-demo"
-            @open="handleOpen"
-            @close="handleClose"
+            @select="handleMenuSelect"
             :collapse="true"
             background-color="#606266">
             <el-menu-item index="1">
@@ -47,11 +46,16 @@ export default {
     // MapView,
   },
   methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath);
+    handleMenuSelect(index) {
+      console.log(index);
+      if (index === '1') {
+        //跳转到首页大屏
+        this.$router.push('/');
+      } else if (index === '2') {
+        //跳转到一张图
+        // this.$router.push() 可以通过修改url实现路由跳转
+        this.$router.push('/onemap');
+      }
     },
   },
 };
