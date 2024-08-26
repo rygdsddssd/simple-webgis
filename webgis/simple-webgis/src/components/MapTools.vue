@@ -14,8 +14,25 @@ export default {
   methods: {
     handleMapToolsItemClick(e) {
       console.log(e.target.id);
+      switch (e.target.id) {
+        case 'xzqh':
+          break;
+        case 'maptree':
+          this.openMapTreePannel();
+          break;
+        case 'clear':
+          break;
+        default:
+          break;
+      }
     },
-},
+    openMapTreePannel() {
+      let mapTreePannelVisible = this.$store.getters._getDefaultMapTreeVisible;
+      console.log(mapTreePannelVisible);
+      this.$store.commit('_setDefaultMapTreeVisible', !mapTreePannelVisible);
+      console.log(this.$store.getters._getDefaultMapTreeVisible);
+    },
+  },
 };
 </script>
 
