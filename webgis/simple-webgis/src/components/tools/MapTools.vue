@@ -1,7 +1,7 @@
 <template>
   <div class="maptools-view">
     <span class="maptools-item" @click="handleMapToolsItemClick" id="xzqh">行政区划导航</span>
-    <span class="maptools-item" @click="handleMapToolsItemClick" id="maptree">目录树管理</span>
+    <span class="maptools-item" @click="handleMapToolsItemClick" id="maptree">地图树管理</span>
     <span class="maptools-item" @click="handleMapToolsItemClick" id="distance">距离测量</span>
     <span class="maptools-item" @click="handleMapToolsItemClick" id="area">面积测量</span>
     <span class="maptools-item" @click="handleMapToolsItemClick" id="clear">清屏</span>
